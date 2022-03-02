@@ -224,13 +224,18 @@ function createCircle(gl){
     let vertexBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
     let verts = [];
-
-    for(let i = 0; i < 360; i++){
+    verts.push(0)
+    verts.push(0)
+    verts.push(0)
+    for(let i = 45; i < 310; i++){
         let rad = i * Math.PI / 180;
         verts.push(Math.cos(rad));
         verts.push(Math.sin(rad));
         verts.push(0)
     }
+    verts.push(0)
+    verts.push(0)
+    verts.push(0)
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
     console.log(gl.TRIANGLES)
     console.log(gl)
