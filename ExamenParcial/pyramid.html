@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierpinski Pyramid</title>
+
+    <script src="gl-matrix.js"></script>
+    
+</head>
+<body style="display:flex;flex-direction: column;">
+    <p>Profunidad (Deme puntos extras) Max: 8 (por call stack size)</p>
+    <div style="display:flex;">
+    <input id="depth" type="number" placeholder="3" value="3"/>
+    <button id="cambiar">Cambiar</button>
+    </div>
+    <canvas id="pyramidCanvas" width="800" height="600" style="border: black; border-style: solid;"></canvas>
+</body>
+<script type="module" defer src="pyramid.js"></script>
+</html>
