@@ -45,8 +45,8 @@ function onMouseMove(evt, group)
     // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
     evt.preventDefault();
     
-    let deltax = evt.pageX - pageX;
-    let deltay = pageY - evt.pageY;
+    let deltax = pageX -  evt.pageX;
+    let deltay = pageY -  evt.pageY;
     pageX = evt.pageX;
     pageY = evt.pageY;
     rotateSceneX(deltax, group);
